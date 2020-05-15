@@ -9,8 +9,8 @@ fn main() {
         process::exit(1)
     });
 
-    println!("Running query {}", config.query);
-    println!("In file: {}", config.filename);
+    println!("Running query '{}'", config.query);
+    println!("In file: '{}'", config.filename);
 
     if let Err(e) = minigrep::run(config) {
         println!("Failed to read content! {}", e);
